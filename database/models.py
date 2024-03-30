@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 
 from database import Base
 
+
 # Таблица пользователя
 class User(Base):
     __tablename__ = 'users'
@@ -23,7 +24,7 @@ class User(Base):
 
 # Таблица Машин
 class Car(Base):
-    __tablename__ = 'cars'
+    __tablename__ = "cars"
     car_id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey('users.user_id'))
     car_price = Column(Float)
